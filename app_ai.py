@@ -67,7 +67,14 @@ def generate_image(text):
     return response.data[0].url
 
 # Cell 4: Streamlit UI 
-user_input = st.text_area("Replace the text below with your post summary:", "What makes a great French Croissant pastry?")
+user_input = st.text_area("Replace the text below with your post summary:", "Goal: Increase engagement and share new product launch.
+Audience: Young adults interested in eco-friendly products.
+Content Details: Highlight the key features of the new eco-friendly water bottle, emphasize sustainability, and introduce a limited-time launch discount.
+Tone and Style: Inspirational and energetic.
+Visual Elements: Bright, eye-catching image of the product in a natural setting.
+Call to Action: Encourage followers to visit the website to learn more and use a promo code for a discount.
+Hashtags: #EcoFriendlyLiving #SustainableChoices
+Mentions: Mention partner organizations and influencers.")
 
 if st.button('Generate Social Post'):
     with st.spinner('Generating Your Post...'):
