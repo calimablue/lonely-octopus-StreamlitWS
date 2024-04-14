@@ -32,15 +32,13 @@ def analyze_text(text):
         {"role": "system", "content": "You are a professional copywriter and advertisement expert who helps craft social media posts."},
         {"role": "user", "content": f"""Craft a social media post to grab someone’s attention and encourage them to engage in the topic. Craft the same post for each of the following social platforms:
 1. Facebook Status Update: use an average of 80 characters.
-2. X (formerly Twitter): use an average of 100 characters. Add hashtags with a single word under 6 characters.
+2. X (Twitter): use an average of 100 characters. Add hashtags with a single word under 6 characters.
 3. Instagram: use between 138 to 150 characters. Add 4-9 hashtags with 22 characters or less. 
-4. Instagram caption: Use an average of 125 characters. No hashtags.
+4. Instagram caption: use an average of 125 characters. No hashtags.
 5. Linkedin: use an average of 1700 characters. Add 2-4 hashtags.
 Present your results in a table with the headings: Social Platform, Post, Total Characters in Post.
 After the table, craft a recommendation about using an image with the post.{text}"""
 }
-
-        
     ]
 
     response = client.chat.completions.create(
@@ -69,14 +67,14 @@ def generate_image(text):
     return response.data[0].url
 
 # Cell 4: Streamlit UI 
-user_input = st.text_area("Enter a brief for your post:", "What makes a great French Croissant pastry?")
+user_input = st.text_area("Replace the text below with your post summary:", "What makes a great French Croissant pastry?")
 
-if st.button('Generate Post Content'):
-    with st.spinner('Generating Text...'):
+if st.button('Generate Social Post'):
+    with st.spinner('Generating Your Post...'):
         post_text = analyze_text(user_input)
         st.write(post_text)
 
-    with st.spinner('Generating Thumbnail...'):
+    with st.spinner('Generating a Social Thumbnail...'):
         thumbnail_url = generate_image(user_input)  # Consider adjusting the prompt for image generation if needed
         st.image(thumbnail_url, caption='Generated Thumbnail')
 
