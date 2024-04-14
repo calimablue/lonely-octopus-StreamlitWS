@@ -34,7 +34,7 @@ def analyze_text(text):
 1. Facebook Status Update: use an average of 80 characters.
 2. X (formerly Twitter): use an average of 100 characters. Add hashtags with a single word under 6 characters.
 3. Instagram: use between 138 to 150 characters. Add 4-9 hashtags with 22 characters or less. 
-4. Instagram caption: Use an average of 125 characters. 
+4. Instagram caption: Use an average of 125 characters. No hashtags.
 5. Linkedin: use an average of 1700 characters. Add 2-4 hashtags.
 Present your results in a table with the headings: Social Platform, Post, Total Characters in Post.
 After the table, craft a recommendation about using an image with the post.{text}"""
