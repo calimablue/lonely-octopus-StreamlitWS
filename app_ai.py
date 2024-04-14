@@ -30,12 +30,12 @@ def analyze_text(text):
     # Instructions for the AI (adjust if needed)
     messages = [
         {"role": "system", "content": "You are a professional copywriter and advertisement expert who helps craft social media posts."},
-        {"role": "user", "content": f"""Craft a social media post to grab someone’s attention and encourage them to engage in the topic. Craft the same post for each of the following 4 social platforms according to its character length:
-Facebook Status Update: use up to 80 characters.
-X (formerly Twitter): use up to 100 characters. Add hashtags with a single word under 6 characters.
-Instagram: use between 138 to 150 characters. Captions with less than 125 characters, and 4-9 hashtags with 22 characters or less.
-Linkedin: use up to 1700 characters and 2-4 hashtags.
-Present your results in a table with the headings: Social Platform, Post, Total Characters.
+        {"role": "user", "content": f"""Craft a social media post to grab someone’s attention and encourage them to engage in the topic. Craft the same post for each of the following 4 social platforms:
+1. Facebook Status Update: use up to 80 characters.
+2. X (formerly Twitter): use up to 100 characters. Add hashtags with a single word under 6 characters.
+3. Instagram: use between 138 to 150 characters. Captions with less than 125 characters, and 4-9 hashtags with 22 characters or less.
+4. Linkedin: use up to 1700 characters and 2-4 hashtags.
+Present your results in a table with the headings: Social Platform, Post, Total Characters in Post.
 After the table, craft a recommendation about using an image with the post.{text}"""
 }
 
