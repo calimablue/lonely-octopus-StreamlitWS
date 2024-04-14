@@ -36,8 +36,7 @@ def analyze_text(text):
 2. X (formerly Twitter) up to 100 characters and hashtags with a single word under 6 characters.
 3. Instagram between 138 to 150 characters, captions with less than 125 characters, and 4-9 hashtags with 22 characters or less.
 4. Linkedin up to 1900 words and 2-4 hashtags..
-Present your results in a table with the headings: Social Platform, Post, Total Characters/words.
-Display the image after the table."""
+Present your results in a table with the headings: Social Platform, Post, Total Characters."""
 }
 
         
