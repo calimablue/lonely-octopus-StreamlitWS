@@ -15,8 +15,8 @@ api_key = os.getenv("OPENAI_API_KEY")  # Used in production
 client = OpenAI(api_key=api_key)
 
 # Cell 2: Title & Description
-st.title('🤖 AI Content Assistant')
-st.markdown('I was made to help you craft interesting Social media posts.')
+st.title('🤖 AI Social Media Poster')
+st.markdown('I was made to help you craft a Social Media Post with the best Length for engagement.')
 
 # Cell 3: Function to generate text using OpenAI
 def analyze_text(text):
@@ -30,7 +30,13 @@ def analyze_text(text):
     # Instructions for the AI (adjust if needed)
     messages = [
         {"role": "system", "content": "You are a professional copywriter and advertisement expert who helps craft social media posts."},
-        {"role": "user", "content": f"Please help me write a social media post that includes a step-by-step guide and based on the following:\n{text}"}
+        {"role": "user", "content": f"Craft a social media post to grab someone’s attention and encourage them to engage. Craft the same post for each of the following 4 social platforms:  
+1.Facebook status update with 80 characters.
+2. X (formerly Twitter) up to 100 characters and hashtags with a single word under 6 characters.
+3. Instagram between 138 to 150 characters, captions with less than 125 characters, and 4-9 hashtags with 22 characters or less.
+4. LinkedIn up to 1900 words and 2-4 hashtags..
+Present your results in a table with the headings: Social Platform, Post, Total Characters/words.
+Display the image after the table.\n{text}"}
     ]
 
     response = client.chat.completions.create(
@@ -59,7 +65,7 @@ def generate_image(text):
     return response.data[0].url
 
 # Cell 4: Streamlit UI 
-user_input = st.text_area("Enter a brief for your post:", "How should you maintain a deployed model?")
+user_input = st.text_area("Enter a brief for your post:", "What makes a great buttery Croissant?")
 
 if st.button('Generate Post Content'):
     with st.spinner('Generating Text...'):
