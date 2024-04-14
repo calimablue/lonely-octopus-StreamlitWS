@@ -36,7 +36,7 @@ X (formerly Twitter) up to 100 characters and hashtags with a single word under 
 Instagram between 138 to 150 characters, captions with less than 125 characters, and 4-9 hashtags with 22 characters or less.
 Linkedin up to 1900 words and 2-4 hashtags.
 Present your results in a table with the headings: Social Platform, Post, Total Characters.
-Display the image after the table."""
+Display the image after the table.{text}"""
 }
 
         
