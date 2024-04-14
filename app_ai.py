@@ -16,7 +16,7 @@ client = OpenAI(api_key=api_key)
 
 # Cell 2: Title & Description
 st.title('🤖 AI Social Media Poster')
-st.subheader('I help you craft a Social Media Post with the best Length for engagement.')
+st.subheader('I help you craft a social media post with an ideal length for engagement.')
 
 # Cell 3: Function to generate text using OpenAI
 def analyze_text(text):
