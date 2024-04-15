@@ -36,7 +36,7 @@ def analyze_text(text):
 3. Instagram: post between 138 to 150 characters. Add 4-9 hashtags with 22 characters or less. 
 4. Instagram caption: post with an average of 125 characters. No hashtags.
 5. Linkedin: post with an average of 1700 characters. Add 2-4 hashtags.
-Present your results in a table with headings for Social Platform, Post, and Total Character Count.
+Present your results in a table that includes the social platform, post, and the total character count you crafted.
 After the table, craft a recommendation about using an image with the post.{text}"""
 }
     ]
