@@ -78,7 +78,7 @@ Tone and Style: Inspirational and energetic.
 Visual Elements: Bright, eye-catching image of the product in a natural setting.
 Call to Action: Encourage followers to visit the website to learn more and use a promo code for a discount.
 Hashtags: #EcoFriendlyLiving #SustainableChoices
-Mentions: Mention partner organizations and influencers.""", height=350)
+Mentions: Mention partner organizations and influencers.""", height=300)
 
 if st.button('Generate Social Post'):
     with st.spinner('Generating Your Post...'):
