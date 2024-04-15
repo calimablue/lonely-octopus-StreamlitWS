@@ -36,7 +36,7 @@ def analyze_text(text):
 3. Instagram: use between 138 to 150 characters. Add 4-9 hashtags with 22 characters or less. 
 4. Instagram caption: use an average of 125 characters. No hashtags.
 5. Linkedin: use an average of 1700 characters. Add 2-4 hashtags.
-Present your results in a table with headings: Social Platform, Post, Total Characters used in Post.
+Present your results in a table with headings: Social Platform, Post, Character Count.
 After the table, craft a recommendation about using an image with the post.{text}"""
 }
     ]
@@ -68,7 +68,7 @@ def generate_image(text):
 
 # Cell 4: Streamlit UI 
 # Display the prompt in bold using Markdown
-st.markdown("**Replace the text below with your post summary:**")
+st.markdown("**Replace the text below with your post summary then click Generate Social Post:**")
 # Provide a text area for user input with a simple placeholder
 user_input = st.text_area("", """GOAL: Increase engagement and share new product launch.
 AUDIENCE: Young adults interested in eco-friendly products.
