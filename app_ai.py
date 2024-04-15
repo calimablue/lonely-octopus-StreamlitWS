@@ -69,7 +69,6 @@ def generate_image(text):
 # Cell 4: Streamlit UI 
 # Display the prompt in bold using Markdown
 st.markdown("**Replace the text below with your post summary:**")
-
 # Provide a text area for user input with a simple placeholder
 user_input = st.text_area("", """Goal: Increase engagement and share new product launch.
 Audience: Young adults interested in eco-friendly products.
