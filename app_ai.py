@@ -16,7 +16,7 @@ client = OpenAI(api_key=api_key)
 
 # Cell 2: Title & Description
 st.title('🤖 AI Social Media Poster')
-st.subheader('I help you craft a social media post with an ideal length for maximum engagement.')
+st.subheader('I help you craft a social media post with an ideal length and image for maximum engagement.')
 
 # Cell 3: Function to generate text using OpenAI
 def analyze_text(text):
@@ -31,12 +31,12 @@ def analyze_text(text):
     messages = [
         {"role": "system", "content": "You are a professional copywriter and advertisement expert who helps craft social media posts."},
         {"role": "user", "content": f"""Craft a social media post to grab someone’s attention and encourage them to engage in the topic. Craft the same post for each of the following social platforms:
-1. Facebook Status Update needs an average of 80 characters.
-2. X (Twitter) needs an average of 100 characters. Add hashtags with a single word under 6 characters.
-3. Instagram use between 138 to 150 characters. Add 4-9 hashtags with 22 characters or less. 
-4. Instagram caption use an average of 125 characters. No hashtags.
-5. Linkedin needs an average of 1700 characters. Add 2-4 hashtags.
-Present your results in a table with headings for Social Platform, Post, and character Count for generated posts.
+1. Facebook Status: post with an average of 80 characters.
+2. X (Twitter): post with an average of 100 characters. Add hashtags with a single word under 6 characters.
+3. Instagram: post between 138 to 150 characters. Add 4-9 hashtags with 22 characters or less. 
+4. Instagram caption: post with an average of 125 characters. No hashtags.
+5. Linkedin: post with an average of 1700 characters. Add 2-4 hashtags.
+Present your results in a table with headings for Social Platform, Post, and Total Character Count.
 After the table, craft a recommendation about using an image with the post.{text}"""
 }
     ]
